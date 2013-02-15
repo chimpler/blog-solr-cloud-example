@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+  <luceneMatchVersion>LUCENE_41</luceneMatchVersion>
+  <dataDir>${solr.data.dir:}</dataDir>
+
+  <directoryFactory name="DirectoryFactory"
+                    class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
+
+  <!-- The default high-performance update handler -->
+  <updateHandler>
+    <!-- transaction log -->
+    <updateLog>
+      <str name="dir">${solr.ulog.dir:}</str>
+    </updateLog>
+  </updateHandler>
+  <requestHandler name="/update" class="solr.UpdateRequestHandler"/>
+  <requestHandler name="/update/json" class="solr.JsonUpdateRequestHandler"/>
+  <requestHandler name="/update/csv" class="solr.CSVRequestHandler"/>
+
+  <requestHandler name="/admin/"
+                  class="solr.admin.AdminHandlers" />
+</config>
