@@ -19,4 +19,10 @@
   <requestHandler name="/select" class="solr.SearchHandler"/>
   <requestHandler name="/admin/"
                   class="solr.admin.AdminHandlers" />
+  <!-- for streaming file -->
+  <requestDispatcher handleSelect="true" >
+    <requestParsers enableRemoteStreaming="true"
+                    multipartUploadLimitInKB="2048000" />
+  </requestDispatcher>
+
 </config>

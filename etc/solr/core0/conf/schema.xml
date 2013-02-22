@@ -11,10 +11,11 @@
  <fields>
    <field name="id" type="int" indexed="true" stored="true" required="true" />
    <field name="_version_" type="int" indexed="true" stored="true" required="true" />
+   <field name="item_id" type="int" indexed="true" stored="true" required="true" />
    <field name="name" type="string" indexed="true" stored="true" required="true" />
-   <field name="year" type="string" indexed="true" stored="true" required="true" />
-   <field name="month" type="string" indexed="true" stored="true" required="true" />
-   <field name="shipping_method" type="string" indexed="true" stored="true" required="true" />
+   <field name="year" type="int" indexed="true" stored="true" required="true" />
+   <field name="month" type="int" indexed="true" stored="true" required="true" />
+   <field name="shipping_method" type="int" indexed="true" stored="true" required="true" />
    <field name="us_sold" type="int" indexed="true" stored="true" required="true" />
    <field name="ca_sold" type="int" indexed="true" stored="true" required="true" />
    <field name="fr_sold" type="int" indexed="true" stored="true" required="true" />
