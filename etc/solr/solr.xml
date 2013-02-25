@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <solr persistent="true">
-  <cores adminPath="/admin/cores" defaultCoreName="core0" host="${host:}" hostPort="${jetty.port:}" hostContext="${hostContext:}" zkClientTimeout="${zkClientTimeout:15000}">
-    <core name="core0" instanceDir="core0" />
-    <!-- you can add more cores here later -->
+  <cores defaultCoreName="core0" adminPath="/admin/cores" zkClientTimeout="${zkClientTimeout:15000}" hostPort="${jetty.port:}" hostContext="solr">
+    <core loadOnStartup="true" instanceDir="core0" name="core0" collection="collection0" dataDir="/var/lib/solr/core0"/>
+    <!-- add more cores below -->
   </cores>
 </solr>

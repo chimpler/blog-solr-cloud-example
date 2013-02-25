@@ -10,7 +10,7 @@
 
  <fields>
    <field name="id" type="int" indexed="true" stored="true" required="true" />
-   <field name="_version_" type="int" indexed="true" stored="true" required="true" />
+   <field name="_version_" type="long" indexed="true" stored="true" required="true" />
    <field name="item_id" type="int" indexed="true" stored="true" required="true" />
    <field name="name" type="string" indexed="true" stored="true" required="true" />
    <field name="year" type="int" indexed="true" stored="true" required="true" />

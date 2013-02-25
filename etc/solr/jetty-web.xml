@@ -12,6 +12,7 @@
     <Arg type="String">zkHost</Arg>
     <Arg type="String">padthai:2181,couscous:2181</Arg>
   </Call>
+  <!-- only the first node has to use the followings to populate zookeeper -->
   <Call name="setProperty" class="java.lang.System">
     <Arg type="String">bootstrap_conf</Arg>
     <Arg type="String">true</Arg>
