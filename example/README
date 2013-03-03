@@ -1,0 +1,5 @@
+Generate sample file:
+$ python gen-core0-data.py > data.csv
+
+You can import this file into SOLR as follows:
+$ curl http://localhost:8983/solr/core0/update/csv?stream.file=$PWD/data.csv 
